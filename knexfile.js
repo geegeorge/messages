@@ -2,8 +2,14 @@
 
 module.exports = {
 
-  development: { },
-  test: { },
-  production: { },
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/crudious'
+  },
+  test: {
+    client: 'pg',
+    connection: 'postgres://localhost/crudious'
+  },
+  production: {},
 
 };
