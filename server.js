@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var messages = require('./routes/messages');
-
+var users = require('./routes/users')
 var app = express();
 
 // view engine setup
@@ -25,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/users', users)
 app.use('/messages', messages);
 
 // catch 404 and forward to error handler
